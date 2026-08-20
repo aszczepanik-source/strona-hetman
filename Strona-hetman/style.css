@@ -389,31 +389,53 @@ a { text-decoration: none; color: var(--color-primary); }
 .news-date { color: var(--color-muted); font-size: 0.78rem; text-transform: uppercase; margin-left: 8px; }
 .news-link { font-weight: 700; }
 
-/* ===== ZESPÓŁ ===== */
+/* ===== ZESPÓŁ (pełna strona kadry, styl jak "Poznaj drużynę") ===== */
 .squad-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 4px;
 }
 .player-card {
-  text-align: center;
-  background: var(--color-dark-2);
-  border-radius: var(--radius);
-  padding: 16px;
+  display: block;
+  background: transparent;
+  padding: 0;
   transition: transform 0.25s ease;
 }
-.player-card:hover { transform: translateY(-6px); }
+.player-card:hover { transform: translateY(-4px); }
 .player-photo {
-  height: 160px;
+  height: 300px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0;
   background: linear-gradient(135deg, #3a4550, #1f272e);
-  margin-bottom: 10px;
+  margin-bottom: 0;
   object-fit: cover;
   object-position: top center;
   display: block;
+  transition: transform 0.3s ease;
 }
-.player-card h4 { margin: 4px 0 0; font-size: 0.95rem; color: var(--color-white); }
+.player-card:hover .player-photo { transform: scale(1.03); }
+.player-card-info {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 14px 6px 4px;
+}
+.player-card-number {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--color-accent);
+  line-height: 1;
+}
+.player-card-text { display: flex; flex-direction: column; }
+.player-card h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--color-white);
+}
 .player-card span { color: var(--color-muted-light); font-size: 0.8rem; }
 
 /* ===== POZNAJ DRUŻYNĘ (karuzela zdjęć na stronie głównej) ===== */
