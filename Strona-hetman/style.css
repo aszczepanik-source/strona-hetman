@@ -555,6 +555,138 @@ a { text-decoration: none; color: var(--color-primary); }
   .carousel-arrow { display: none; }
 }
 
+/* ===== MECZE PIERWSZEJ DRUŻYNY (spotlight: poprzedni / najbliższy / kolejny) ===== */
+.fixture-spotlight {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: center;
+  margin-top: 24px;
+}
+.fixture-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.fixture-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--color-bg-alt);
+}
+.fixture-date { font-size: 0.78rem; color: var(--color-muted); }
+.fixture-date strong {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-right: 6px;
+}
+.fixture-competition {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.fixture-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 26px 18px;
+  flex: 1;
+}
+.fixture-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+.fixture-team img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background: var(--color-white);
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.14);
+}
+.fixture-team span {
+  font-weight: 800;
+  font-size: 0.8rem;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+.fixture-vs { font-family: var(--font-heading); font-weight: 800; font-size: 1rem; color: var(--color-muted); }
+.fixture-score {
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.3rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  min-width: 58px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.fixture-venue {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 18px;
+  background: var(--color-bg-alt);
+  font-size: 0.78rem;
+}
+.fixture-venue-name { font-weight: 700; color: var(--color-text); }
+.fixture-venue-address { color: var(--color-muted); font-size: 0.72rem; }
+
+/* Karta najbliższego meczu — wyróżniona kolorem klubowym, jak u dużych klubów */
+.fixture-card-next {
+  background: linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.05);
+  position: relative;
+  z-index: 2;
+}
+.fixture-card-next .fixture-card-top { background: rgba(0,0,0,0.18); }
+.fixture-card-next .fixture-date,
+.fixture-card-next .fixture-date strong,
+.fixture-card-next .fixture-competition { color: rgba(255,255,255,0.85); }
+.fixture-card-next .fixture-team span { color: var(--color-white); }
+.fixture-card-next .fixture-vs { color: rgba(255,255,255,0.65); }
+.fixture-card-next .fixture-venue { background: rgba(0,0,0,0.18); }
+.fixture-card-next .fixture-venue-name { color: var(--color-white); }
+.fixture-card-next .fixture-venue-address { color: rgba(255,255,255,0.72); }
+.fixture-next-label-wrap { text-align: center; padding-top: 14px; }
+.fixture-next-label {
+  display: inline-block;
+  background: var(--color-cream);
+  color: var(--color-primary-dark);
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+  .fixture-spotlight { grid-template-columns: 1fr; }
+  .fixture-card-next { transform: none; }
+}
+
 /* ===== TERMINARZ ===== */
 .table-scroll { overflow-x: auto; }
 .fixtures-table {
