@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KS Hetman Włoszczowa — Oficjalna strona klubu</title>
+<meta name="description" content="Oficjalna strona internetowa Klubu Sportowego Hetman Włoszczowa — aktualności, terminarz, kadra, sponsorzy i kontakt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-social">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="YouTube">YouTube</a>
+    </div>
+    <div class="topbar-contact">
+      <span>ul. Wiśniowa 2, Włoszczowa</span>
+      <span>kshetmanwloszczowa@gmail.com</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HEADER / NAWIGACJA ===== -->
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="#top">
+      <!-- LOGO KLUBU: wgraj plik jako logo-klubu.png (PNG, przezroczyste tło, min. 400x400px) -->
+      <img class="brand-logo" src="logo-klubu.png" alt="Herb KS Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
+      <span class="brand-text"><strong>Hetman</strong> Włoszczowa</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#aktualnosci">Aktualności</a>
+      <a href="#zespol">Zespół</a>
+      <a href="#terminarz">Terminarz</a>
+      <a href="#klub">Klub</a>
+      <a href="#akademia">Akademia</a>
+      <a href="#sponsorzy">Sponsorzy</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a class="btn btn-cta" href="#sponsorzy">Zostań sponsorem</a>
+  </div>
+</header>
+
+<!-- ===== HERO: ZDJĘCIE ZESPOŁU W TLE ===== -->
+<!--
+  ZDJĘCIE HERO (tło sekcji startowej): hero-zespol.jpg
+  Podmień na nowsze/lepsze zdjęcie zespołu w tym samym miejscu, jeśli będzie potrzeba.
+-->
+<section class="hero" id="top" style="background-image: linear-gradient(rgba(16,21,26,0.55), rgba(16,21,26,0.75)), url('hero-zespol.jpg');">
+  <div class="hero-inner-grid">
+  <div class="hero-feature">
+    <div class="hero-feature-badge">Sezon 2026/2027</div>
+    <h1>Razem od pokoleń.<br>Gramy dla Włoszczowy.</h1>
+    <p>Oficjalna strona KS Hetman Włoszczowa — aktualności, wyniki, kadra i wszystko, co dzieje się wokół pierwszego zespołu oraz Akademii.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#terminarz">Terminarz i wyniki</a>
+      <a class="btn btn-outline" href="#aktualnosci">Aktualności</a>
+    </div>
+  </div>
+
+  <aside class="hero-side">
+    <div class="match-card">
+      <span class="match-card-label">Najbliższy mecz</span>
+      <div class="match-teams">
+        <div class="team">
+          <img src="logo-klubu.png" alt="Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
+          <span>Hetman</span>
+        </div>
+        <div class="match-score">vs</div>
+        <div class="team">
+          <img src="placeholder-logo.svg" alt="Granat Skarżysko-Kamienna">
+          <span>Granat Sk.-Kam.</span>
+        </div>
+      </div>
+      <p class="match-meta">Niedziela, 23 sierpnia, 17:00 &middot; wyjazd</p>
+      <p class="match-meta match-meta-league">IV liga świętokrzyska</p>
+    </div>
+
+    <div class="last-match-strip">
+      <span class="match-card-label">Ostatni mecz</span>
+      <div class="last-match-row">
+        <span>Hetman</span>
+        <strong class="score-loss">2:6</strong>
+        <span>Victoria 2015</span>
+      </div>
+    </div>
+  </aside>
+  </div>
+</section>
+
+<!-- ===== OSIĄGNIĘCIA / HISTORIA W PIGUŁCE ===== -->
+<section class="stats-strip">
+  <div class="container stats-grid">
+    <div class="stat"><strong>1947</strong><span>Rok założenia</span></div>
+    <div class="stat"><strong>IV liga</strong><span>Świętokrzyska</span></div>
+    <div class="stat"><strong>2008/09</strong><span>Awans z IV do III ligi</span></div>
+    <div class="stat"><strong>Kilka</strong><span>Grup młodzieżowych</span></div>
+  </div>
+</section>
+
+<!-- ===== AKTUALNOŚCI ===== -->
+<section class="section" id="aktualnosci">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Aktualności</h2>
+      <div class="tag-filters">
+        <span class="tag tag-active">Wszystkie</span>
+        <span class="tag">I zespół</span>
+        <span class="tag">Akademia</span>
+        <span class="tag">Klub</span>
+      </div>
+    </div>
+
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-thumb" aria-hidden="true"></div>
+        <div class="news-body">
+          <span class="news-tag">Klub</span>
+          <span class="news-date">4 sierpnia 2026</span>
+          <h3>Nadzwyczajne Walne Zebranie Członków K.S. Hetman Włoszczowa</h3>
+          <p>Zarząd Klubu zwołuje Nadzwyczajne Walne Zebranie Członków na poniedziałek 17 sierpnia 2026 r. (I termin 19:15, II termin 19:30) w Pawilonie Sportowym Stadionu OSiR im. Mariana Górskiego we Włoszczowie, ul. Wiśniowa 30. Głównym powodem zwołania zebrania jest konieczność uregulowania sytuacji formalno-prawnej władz klubu — obecny Zarząd liczy 3 osoby, a Statut wymaga od 4 do 7 członków.</p>
+          <a class="news-link" href="https://www.hetmanwloszczowa.pl/nadzwyczajne-walne-zebranie-czlonkow-k-s-hetman-wloszczowa-2/" target="_blank" rel="noopener">Czytaj więcej →</a>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-thumb" aria-hidden="true"></div>
+        <div class="news-body">
+          <span class="news-tag">Klub</span>
+          <span class="news-date">10 czerwca 2026</span>
+          <h3>Walne Zebranie Sprawozdawcze K.S. Hetman Włoszczowa</h3>
+          <p>W imieniu Zarządu Klubu Sportowego Hetman Włoszczowa serdecznie zapraszamy wszystkich członków klubu, kibiców, piłkarzy, działaczy, sympatyków oraz Rodziców Zawodników na Walne Zebranie Sprawozdawcze — w poniedziałek 22 czerwca 2026 r. (I termin 19:15, II termin 19:30), w Pawilonie Sportowym OSiR we Włoszczowie.</p>
+          <a class="news-link" href="https://www.hetmanwloszczowa.pl/walne-zabranie-sprawozdawcze-k-s-hetman-wloszczowa/" target="_blank" rel="noopener">Czytaj więcej →</a>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-thumb" aria-hidden="true"></div>
+        <div class="news-body">
+          <span class="news-tag">Akademia</span>
+          <span class="news-date">11 lutego 2025</span>
+          <h3>K.S. Hetman Włoszczowa ze Srebrnym Certyfikatem PZPN na 2025 rok</h3>
+          <p>Nasz klub otrzymał Srebrny Certyfikat PZPN na 2025 rok, co potwierdza, że jesteśmy w elitarnym gronie szkółek piłkarskich w całej Polsce. Szkolimy dzieci od grupy 2019 po najstarsze kategorie — wszyscy trenerzy są odpowiednio wykwalifikowani. To gwarancja bezpiecznego i wiarygodnego miejsca rozwoju sportowego i społecznego dla najmłodszych piłkarzy.</p>
+          <a class="news-link" href="https://www.hetmanwloszczowa.pl/k-s-hetman-wloszczowa-ze-srebrnym-certyfikatem-pzpn-na-2025-rok/" target="_blank" rel="noopener">Czytaj więcej →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ZESPÓŁ ===== -->
+<section class="section section-dark" id="zespol">
+  <div class="container">
+    <h2 class="section-title section-title-light">Zespół</h2>
+    <p class="section-sub section-sub-light">Kadra pierwszego zespołu — skład będzie uzupełniony wraz z rozpoczęciem sezonu.</p>
+
+    <!--
+      ZDJĘCIA ZAWODNIKÓW: wgraj kolejne portrety do głównego katalogu repo (player-04.jpg, player-05.jpg, ...)
+      i dodaj kolejne bloki .player-card. Uzupełnij prawdziwe imiona, nazwiska i pozycje w <h4>/<span>.
+    -->
+    <div class="squad-grid">
+      <div class="player-card">
+        <img class="player-photo" src="player-01.jpg" alt="Zawodnik 1">
+        <h4>Imię Nazwisko</h4>
+        <span>Pozycja</span>
+      </div>
+      <div class="player-card">
+        <img class="player-photo" src="player-02.jpg" alt="Zawodnik 2">
+        <h4>Imię Nazwisko</h4>
+        <span>Pozycja</span>
+      </div>
+      <div class="player-card">
+        <img class="player-photo" src="player-03.jpg" alt="Zawodnik 3">
+        <h4>Imię Nazwisko</h4>
+        <span>Pozycja</span>
+      </div>
+      <div class="player-card">
+        <div class="player-photo" aria-hidden="true"></div>
+        <h4>Imię Nazwisko</h4>
+        <span>Pozycja</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TERMINARZ I TABELA ===== -->
+<!-- Dane: kieleckapilka.pl (IV liga świętokrzyska, sezon 2026/2027) — zaktualizuj po kolejnych kolejkach -->
+<section class="section" id="terminarz">
+  <div class="container">
+    <h2 class="section-title">Terminarz i tabela</h2>
+    <p class="section-sub">IV liga świętokrzyska, sezon 2026/2027 — na podstawie <a href="https://www.kieleckapilka.pl/club.php?teamid=11" target="_blank" rel="noopener">kieleckapilka.pl</a>.</p>
+
+    <div class="table-position-strip">
+      <span><strong>11.</strong> miejsce w tabeli</span>
+      <span><strong>2</strong> mecze</span>
+      <span><strong>1W&nbsp;0R&nbsp;1P</strong></span>
+      <span><strong>3:6</strong> bramki</span>
+      <span><strong>3</strong> pkt</span>
+    </div>
+
+    <h3 class="fixtures-subtitle">Ostatnie wyniki</h3>
+    <table class="fixtures-table">
+      <thead>
+        <tr><th>Data</th><th>Mecz</th><th>Wynik</th><th>Rozgrywki</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>9 sierpnia</td><td>OKS Opatów — Hetman Włoszczowa</td><td class="score-win">0:1</td><td>IV liga</td></tr>
+        <tr><td>15 sierpnia</td><td>Hetman Włoszczowa — Victoria 2015 Skalbmierz</td><td class="score-loss">2:6</td><td>IV liga</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="fixtures-subtitle">Najbliższe mecze</h3>
+    <table class="fixtures-table">
+      <thead>
+        <tr><th>Data</th><th>Godzina</th><th>Mecz</th><th>Rozgrywki</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>23 sierpnia</td><td>17:00</td><td>Granat Skarżysko-Kamienna — Hetman Włoszczowa</td><td>IV liga</td></tr>
+        <tr><td>26 sierpnia</td><td>17:15</td><td>Sparta Kazimierza Wielka — Hetman Włoszczowa</td><td>IV liga</td></tr>
+        <tr><td>30 sierpnia</td><td>17:00</td><td>KKP Korona Kielce — Hetman Włoszczowa</td><td>IV liga</td></tr>
+        <tr><td>6 września</td><td>16:00</td><td>GKS Nowiny — Hetman Włoszczowa</td><td>IV liga</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== KLUB / HISTORIA (animowana linia czasu) ===== -->
+<section class="section section-alt history-section" id="klub">
+  <div class="container">
+    <p class="eyebrow-dark">Hetman Włoszczowa</p>
+    <h2 class="section-title">Klub w pigułce</h2>
+    <p class="section-sub">Blisko 80 lat historii, dwa awanse do III ligi i jedna z najmłodszych, w większości złożona z wychowanków, kadr w województwie.</p>
+
+    <div class="history-stats reveal-group">
+      <div class="history-stat reveal-item">
+        <strong class="counter" data-target="1947" data-format="year">0</strong>
+        <span>Powstanie klubu</span>
+        <p>Klub założony we Włoszczowie — od tego czasu nieprzerwanie reprezentuje miasto i powiat.</p>
+      </div>
+      <div class="history-stat reveal-item">
+        <strong class="counter" data-target="1995" data-format="year">0</strong>
+        <span>I awans do III ligi</span>
+        <p>Debiut zwycięstwem 2:1 z Koroną Kielce — historyczny moment w dziejach klubu.</p>
+      </div>
+      <div class="history-stat reveal-item">
+        <strong class="counter" data-target="2009" data-format="year">0</strong>
+        <span>II awans do III ligi</span>
+        <p>Triumf w rozgrywkach IV ligi i powrót na trzecioligowe stadiony.</p>
+      </div>
+      <div class="history-stat reveal-item">
+        <strong><span class="counter" data-target="79">0</span> lat</strong>
+        <span>historii klubu</span>
+        <p>Klub stale się rozwija — potwierdzeniem jakości pracy z młodzieżą jest Srebrny Certyfikat PZPN.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">1947</span>
+          <p>Klub sportowy zostaje założony we Włoszczowie.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">1949–1950</span>
+          <p>Jako <strong>Spójnia</strong> wygrywa klasę C i awansuje do klasy B. W 1950 roku dochodzi do finału okręgowego Pucharu Polski, przegrywając ze Stalą Starachowice 2:11 (po remisie 2:2 w pierwszej połowie).</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">1957</span>
+          <p>Pod nazwą <strong>Kłos</strong> wygrywa rozgrywki klasy B, choć awans do klasy A wywalczą wtedy Świt Ćmielów i Radomiak II Radom.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">1969</span>
+          <p>Jako <strong>Sparta</strong> wywalcza awans do klasy A. W inauguracyjnym meczu pada remis 2:2 z Prochem Pionki — gole strzelają Jerzy Stramski i Janusz Gawron.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">1974</span>
+          <p>13 września zespół przyjmuje nazwę <strong>Hetman</strong> i przechodzi pod patronat Zakładów Stolarki Budowlanej — nazwa, pod którą klub jest znany do dziś.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">1992/1993</span>
+          <p>Po latach gry w klasie okręgowej i klasie A, Hetman wywalcza awans do IV ligi międzyokręgowej.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot timeline-dot-highlight"></div>
+        <div class="timeline-card timeline-card-highlight">
+          <span class="timeline-year">1995</span>
+          <p><strong>I awans do III ligi.</strong> Debiut 6 sierpnia domowym zwycięstwem 2:1 z Koroną Kielce (gole Andrzeja Deca i Jarosława Kiczki). W sezonie: 9 wygranych, 8 remisów, 9 porażek — 6. miejsce w tabeli, 7 punktów za wicelierem.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">1996/1997</span>
+          <p>Trudniejszy sezon w III lidze — 15 porażek (w tym 1:4 z Motorem Lublin i 0:4 z Koroną Kielce) i finalnie 13. miejsce, dwa punkty nad strefą spadkową.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">1997/1998</span>
+          <p>8. miejsce w III lidze i 15 zwycięstw w 32 meczach (m.in. 3:0 z Motorem Lublin), ale reforma rozgrywek sprowadza klub do IV ligi, gdzie gra do 2005 roku.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot timeline-dot-highlight"></div>
+        <div class="timeline-card timeline-card-highlight">
+          <span class="timeline-year">2008/2009</span>
+          <p><strong>II awans do III ligi.</strong> Po trzech sezonach w klasie okręgowej Hetman wygrywa rozgrywki IV ligi (piąty poziom rozgrywkowy) i wraca na trzecioligowe boiska.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">2009/2010</span>
+          <p>Najsłabszy sezon w III lidze — tylko 4 wygrane (m.in. 1:0 z MZKS Alwernia) przy 22 porażkach. 16. miejsce oznacza spadek do IV ligi.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">Dziś</span>
+          <p>Hetman gra w <strong>IV lidze świętokrzyskiej</strong>, prowadząc jednocześnie szkolenie młodzieży w kilku grupach wiekowych — klub ma Srebrny Certyfikat PZPN i w większości opiera skład na własnych wychowankach.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AKADEMIA / MŁODY HETMAN ===== -->
+<section class="section" id="akademia">
+  <div class="container academy-grid">
+    <div class="academy-media" aria-hidden="true"></div>
+    <div class="academy-text">
+      <h2 class="section-title">Akademia — Młody Hetman</h2>
+      <p>Szkolimy dzieci i młodzież w kilku grupach wiekowych. Stawiamy na rozwój techniczny, zdrową rywalizację i dobrą atmosferę na treningach.</p>
+      <p><strong>Kontakt do zapisów:</strong> <a href="mailto:kshetmanwloszczowa@gmail.com">kshetmanwloszczowa@gmail.com</a></p>
+      <a class="btn btn-primary" href="#kontakt">Zapisz dziecko</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPONSORZY (podział na poziomy, jak u dużych klubów) ===== -->
+<section class="section section-dark" id="sponsorzy">
+  <div class="container">
+    <h2 class="section-title section-title-light">Nasi sponsorzy i partnerzy</h2>
+    <p class="section-sub section-sub-light">Dziękujemy firmom i instytucjom, które wspierają rozwój klubu.</p>
+
+    <!--
+      LOGA SPONSORÓW I PARTNERÓW:
+      1) Wgraj pliki PNG/JPG (najlepiej przezroczyste tło, ok. 300x150px) do głównego katalogu repo
+      2) Podmień src, alt i href poniżej na dane konkretnego sponsora/partnera
+      3) Dodawaj kolejne <a class="sponsor-logo"> wg potrzeb w każdej z grup (Sponsorzy / Partnerzy),
+         a jeśli pojawi się sponsor tytularny, można dodać osobny blok "Sponsor główny" z klasą sponsor-logo-lg
+    -->
+
+    <div class="sponsor-tier">
+      <span class="sponsor-tier-label">Sponsorzy</span>
+      <div class="sponsors-grid">
+        <a class="sponsor-logo" href="https://airroxy.com" target="_blank" rel="noopener">
+          <img src="sponsor-01.png" alt="airRoxy" onerror="this.parentElement.classList.add('sponsor-empty')">
+        </a>
+        <a class="sponsor-logo" href="#" target="_blank" rel="noopener">
+          <img src="sponsor-02.jpg" alt="Global Company 24" onerror="this.parentElement.classList.add('sponsor-empty')">
+        </a>
+      </div>
+    </div>
+
+    <div class="sponsor-tier">
+      <span class="sponsor-tier-label">Partnerzy</span>
+      <div class="sponsors-grid sponsors-grid-sm">
+        <a class="sponsor-logo" href="#" target="_blank" rel="noopener">
+          <img src="partner-01.png" alt="OSiR Włoszczowa" onerror="this.parentElement.classList.add('sponsor-empty')">
+        </a>
+        <a class="sponsor-logo" href="#" target="_blank" rel="noopener">
+          <img src="partner-02.png" alt="Gmina Włoszczowa" onerror="this.parentElement.classList.add('sponsor-empty')">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KONTAKT ===== -->
+<footer class="site-footer" id="kontakt">
+  <div class="container footer-grid">
+    <div>
+      <h3>Klub Sportowy Hetman Włoszczowa</h3>
+      <p>ul. Wiśniowa 2, 29-100 Włoszczowa</p>
+      <p><a href="mailto:kshetmanwloszczowa@gmail.com">kshetmanwloszczowa@gmail.com</a></p>
+      <p>NIP: 656-183-44-96 &middot; REGON: 290962139</p>
+      <p>Konto: BS Włoszczowa 69 8525 0002 0000 0010 5255 0001</p>
+    </div>
+    <div>
+      <h3>Menu</h3>
+      <a href="#aktualnosci">Aktualności</a>
+      <a href="#zespol">Zespół</a>
+      <a href="#terminarz">Terminarz</a>
+      <a href="#klub">Klub</a>
+      <a href="#sponsorzy">Sponsorzy</a>
+    </div>
+    <div>
+      <h3>Znajdź nas</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> KS Hetman Włoszczowa. Wszystkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
