@@ -8,6 +8,17 @@ if (navToggle && mainNav) {
   });
 }
 
+// Strzałki karuzeli "Poznaj drużynę"
+document.querySelectorAll('.team-carousel').forEach((carousel) => {
+  const track = carousel.querySelector('.team-carousel-track');
+  const prev = carousel.querySelector('.carousel-arrow-left');
+  const next = carousel.querySelector('.carousel-arrow-right');
+  if (!track || !prev || !next) return;
+  const scrollStep = () => Math.min(track.clientWidth * 0.8, 480);
+  prev.addEventListener('click', () => track.scrollBy({ left: -scrollStep(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: scrollStep(), behavior: 'smooth' }));
+});
+
 // Automatyczny rok w stopce
 const yearEl = document.getElementById('year');
 if (yearEl) {

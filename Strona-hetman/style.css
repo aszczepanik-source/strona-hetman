@@ -416,6 +416,86 @@ a { text-decoration: none; color: var(--color-primary); }
 .player-card h4 { margin: 4px 0 0; font-size: 0.95rem; color: var(--color-white); }
 .player-card span { color: var(--color-muted-light); font-size: 0.8rem; }
 
+/* ===== POZNAJ DRUŻYNĘ (karuzela zdjęć na stronie głównej) ===== */
+.team-see-all {
+  color: var(--color-accent);
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+.team-see-all:hover { color: var(--color-white); }
+
+.team-carousel { position: relative; }
+.team-carousel-track {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+.team-carousel-track::-webkit-scrollbar { display: none; }
+.team-carousel-card {
+  flex: 0 0 220px;
+  scroll-snap-align: start;
+  display: block;
+}
+.team-carousel-photo {
+  height: 280px;
+  background-size: cover;
+  background-position: top center;
+  background-color: var(--color-dark-2);
+  transition: transform 0.3s ease;
+}
+.team-carousel-card:hover .team-carousel-photo { transform: scale(1.03); }
+.team-carousel-info {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 14px 6px 4px;
+}
+.team-carousel-number {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--color-accent);
+  line-height: 1;
+}
+.team-carousel-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(16,21,26,0.7);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--color-white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 5;
+}
+.carousel-arrow:hover { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-dark); }
+.carousel-arrow-left { left: -8px; }
+.carousel-arrow-right { right: -8px; }
+
+@media (max-width: 700px) {
+  .team-carousel-card { flex: 0 0 160px; }
+  .team-carousel-photo { height: 200px; }
+  .carousel-arrow { display: none; }
+}
+
 /* ===== TERMINARZ ===== */
 .table-scroll { overflow-x: auto; }
 .fixtures-table {
