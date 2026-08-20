@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akademia — KS Hetman Włoszczowa</title>
+<meta name="description" content="Akademia Młody Hetman — szkolenie dzieci i młodzieży w KS Hetman Włoszczowa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-social">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="YouTube">YouTube</a>
+    </div>
+    <div class="topbar-contact">
+      <span>ul. Wiśniowa 2, Włoszczowa</span>
+      <span>kshetmanwloszczowa@gmail.com</span>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="logo-klubu.png" alt="Herb KS Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
+      <span class="brand-text"><strong>Hetman</strong> Włoszczowa</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="aktualnosci.html">Aktualności</a>
+      <a href="zespol.html">Zespół</a>
+      <a href="terminarz.html">Terminarz</a>
+      <a href="klub.html">Klub</a>
+      <a href="akademia.html" class="active">Akademia</a>
+      <a href="sponsorzy.html">Sponsorzy</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <a class="btn btn-cta" href="sponsorzy.html">Zostań sponsorem</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="breadcrumb"><a href="index.html">Strona główna</a> / Akademia</span>
+    <h1>Akademia — Młody Hetman</h1>
+    <p>Szkolimy dzieci i młodzież w kilku grupach wiekowych. Stawiamy na rozwój techniczny, zdrową rywalizację i dobrą atmosferę na treningach.</p>
+  </div>
+</section>
+
+<section class="section" id="akademia">
+  <div class="container academy-grid">
+    <div class="academy-media" aria-hidden="true"></div>
+    <div class="academy-text">
+      <h2 class="section-title">Zapisy do Akademii</h2>
+      <p>Szkolimy dzieci i młodzież w kilku grupach wiekowych. Stawiamy na rozwój techniczny, zdrową rywalizację i dobrą atmosferę na treningach. Klub posiada Srebrny Certyfikat PZPN, co potwierdza jakość pracy z młodzieżą.</p>
+      <p><strong>Kontakt do zapisów:</strong> <a href="mailto:kshetmanwloszczowa@gmail.com">kshetmanwloszczowa@gmail.com</a></p>
+      <a class="btn btn-primary" href="kontakt.html">Zapisz dziecko</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Klub Sportowy Hetman Włoszczowa</h3>
+      <p>ul. Wiśniowa 2, 29-100 Włoszczowa</p>
+      <p><a href="mailto:kshetmanwloszczowa@gmail.com">kshetmanwloszczowa@gmail.com</a></p>
+      <p>NIP: 656-183-44-96 &middot; REGON: 290962139</p>
+      <p>Konto: BS Włoszczowa 69 8525 0002 0000 0010 5255 0001</p>
+    </div>
+    <div>
+      <h3>Menu</h3>
+      <a href="aktualnosci.html">Aktualności</a>
+      <a href="zespol.html">Zespół</a>
+      <a href="terminarz.html">Terminarz</a>
+      <a href="klub.html">Klub</a>
+      <a href="sponsorzy.html">Sponsorzy</a>
+    </div>
+    <div>
+      <h3>Znajdź nas</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> KS Hetman Włoszczowa. Wszystkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

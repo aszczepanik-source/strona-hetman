@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsorzy — KS Hetman Włoszczowa</title>
+<meta name="description" content="Sponsorzy i partnerzy KS Hetman Włoszczowa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-social">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="YouTube">YouTube</a>
+    </div>
+    <div class="topbar-contact">
+      <span>ul. Wiśniowa 2, Włoszczowa</span>
+      <span>kshetmanwloszczowa@gmail.com</span>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="logo-klubu.png" alt="Herb KS Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
+      <span class="brand-text"><strong>Hetman</strong> Włoszczowa</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="aktualnosci.html">Aktualności</a>
+      <a href="zespol.html">Zespół</a>
+      <a href="terminarz.html">Terminarz</a>
+      <a href="klub.html">Klub</a>
+      <a href="akademia.html">Akademia</a>
+      <a href="sponsorzy.html" class="active">Sponsorzy</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <a class="btn btn-cta" href="sponsorzy.html">Zostań sponsorem</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="breadcrumb"><a href="index.html">Strona główna</a> / Sponsorzy</span>
+    <h1>Nasi sponsorzy i partnerzy</h1>
+    <p>Dziękujemy firmom i instytucjom, które wspierają rozwój klubu.</p>
+  </div>
+</section>
+
+<!--
+  LOGA SPONSORÓW I PARTNERÓW:
+  1) Wgraj pliki PNG/JPG (najlepiej przezroczyste tło, ok. 300x150px) do głównego katalogu repo
+  2) Podmień src, alt i href poniżej na dane konkretnego sponsora/partnera
+  3) Dodawaj kolejne <a class="sponsor-logo"> wg potrzeb w każdej z grup (Sponsorzy / Partnerzy),
+     a jeśli pojawi się sponsor tytularny, można dodać osobny blok "Sponsor główny" z klasą sponsor-logo-lg
+-->
+<section class="section section-dark" id="sponsorzy">
+  <div class="container">
+    <div class="sponsor-tier">
+      <span class="sponsor-tier-label">Sponsorzy</span>
+      <div class="sponsors-grid">
+        <a class="sponsor-logo" href="https://airroxy.com" target="_blank" rel="noopener">
+          <img src="sponsor-01.png" alt="airRoxy" onerror="this.parentElement.classList.add('sponsor-empty')">
+        </a>
+        <a class="sponsor-logo" href="#" target="_blank" rel="noopener">
+          <img src="sponsor-02.jpg" alt="Global Company 24" onerror="this.parentElement.classList.add('sponsor-empty')">
+        </a>
+      </div>
+    </div>
+
+    <div class="sponsor-tier">
+      <span class="sponsor-tier-label">Partnerzy</span>
+      <div class="sponsors-grid sponsors-grid-sm">
+        <a class="sponsor-logo" href="#" target="_blank" rel="noopener">
+          <img src="partner-01.png" alt="OSiR Włoszczowa" onerror="this.parentElement.classList.add('sponsor-empty')">
+        </a>
+        <a class="sponsor-logo" href="#" target="_blank" rel="noopener">
+          <img src="partner-02.png" alt="Gmina Włoszczowa" onerror="this.parentElement.classList.add('sponsor-empty')">
+        </a>
+      </div>
+    </div>
+
+    <div class="section-more">
+      <a class="btn btn-primary" href="kontakt.html">Zostań sponsorem — skontaktuj się</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Klub Sportowy Hetman Włoszczowa</h3>
+      <p>ul. Wiśniowa 2, 29-100 Włoszczowa</p>
+      <p><a href="mailto:kshetmanwloszczowa@gmail.com">kshetmanwloszczowa@gmail.com</a></p>
+      <p>NIP: 656-183-44-96 &middot; REGON: 290962139</p>
+      <p>Konto: BS Włoszczowa 69 8525 0002 0000 0010 5255 0001</p>
+    </div>
+    <div>
+      <h3>Menu</h3>
+      <a href="aktualnosci.html">Aktualności</a>
+      <a href="zespol.html">Zespół</a>
+      <a href="terminarz.html">Terminarz</a>
+      <a href="klub.html">Klub</a>
+      <a href="sponsorzy.html">Sponsorzy</a>
+    </div>
+    <div>
+      <h3>Znajdź nas</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> KS Hetman Włoszczowa. Wszystkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

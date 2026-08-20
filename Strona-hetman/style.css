@@ -6,9 +6,9 @@
    ========================================================= */
 
 :root {
-  --color-primary: #880000;      /* bordo z herbu klubu */
-  --color-primary-dark: #520000;
-  --color-accent: #ff6600;       /* pomarańcz z herbu klubu */
+  --color-primary: #bf5700;      /* ciemny pomarańcz z herbu klubu (główny kolor marki) */
+  --color-primary-dark: #7a3800;
+  --color-accent: #ff6600;       /* jaskrawy pomarańcz z herbu klubu */
   --color-cream: #f7e3c8;        /* kremowy akcent z herbu */
   --color-dark: #10151a;
   --color-dark-2: #171e24;
@@ -82,8 +82,8 @@ a { text-decoration: none; color: var(--color-primary); }
   justify-content: space-between;
   gap: 16px;
   padding: 14px 20px;
-  background: var(--color-white);
-  box-shadow: var(--shadow);
+  background: var(--color-dark);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.35);
 }
 .brand {
   display: flex;
@@ -98,10 +98,10 @@ a { text-decoration: none; color: var(--color-primary); }
 .brand-text {
   font-family: var(--font-heading);
   font-size: 1.1rem;
-  color: var(--color-dark);
+  color: var(--color-white);
   white-space: nowrap;
 }
-.brand-text strong { color: var(--color-primary); }
+.brand-text strong { color: var(--color-accent); }
 
 .main-nav {
   display: flex;
@@ -110,18 +110,21 @@ a { text-decoration: none; color: var(--color-primary); }
   justify-content: center;
 }
 .main-nav a {
-  color: var(--color-dark);
+  color: var(--color-white);
+  opacity: 0.85;
   font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
-.main-nav a:hover { color: var(--color-primary); }
+.main-nav a:hover { color: var(--color-accent); opacity: 1; }
+.main-nav a.active { color: var(--color-accent); opacity: 1; }
 
 .nav-toggle {
   display: none;
   background: none;
   border: none;
+  color: var(--color-white);
   font-size: 1.6rem;
   cursor: pointer;
 }
@@ -136,22 +139,18 @@ a { text-decoration: none; color: var(--color-primary); }
   white-space: nowrap;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO: pełnoekranowe zdjęcie, tekst dosunięty do dołu (styl dużych klubów) ===== */
 .hero {
   background-color: var(--color-primary-dark);
   background-size: cover;
-  background-position: center 20%;
+  background-position: center 22%;
   color: var(--color-white);
-  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 20px 160px;
 }
-.hero-inner-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 40px;
-  max-width: 1180px;
-  margin: 0 auto;
-  align-items: center;
-}
+.hero-content { max-width: 720px; }
 .hero-feature-badge {
   display: inline-block;
   background: var(--color-accent);
@@ -166,10 +165,10 @@ a { text-decoration: none; color: var(--color-primary); }
 }
 .hero h1 {
   color: var(--color-white);
-  font-size: 2.6rem;
-  line-height: 1.15;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
 }
-.hero-feature p { color: #dfe7e1; max-width: 480px; }
+.hero-content p { color: #dfe7e1; max-width: 520px; font-size: 1.05rem; }
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
 
 .btn {
@@ -184,15 +183,26 @@ a { text-decoration: none; color: var(--color-primary); }
 .btn-primary { background: var(--color-accent); color: var(--color-dark); }
 .btn-outline { border: 2px solid var(--color-white); color: var(--color-white); }
 
-.hero-side { display: flex; flex-direction: column; gap: 16px; }
-
+/* ===== PASEK MECZOWY: "pływająca" belka najeżdżająca na dół zdjęcia hero ===== */
+.match-bar {
+  position: relative;
+  z-index: 5;
+  margin: -90px 0 40px;
+}
+.match-bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+}
 .match-card {
   background: var(--color-white);
   color: var(--color-text);
-  border-radius: var(--radius);
   padding: 22px;
-  box-shadow: var(--shadow-lg);
 }
+.match-card-inline { flex: 2; min-width: 300px; }
 .match-card-label {
   display: block;
   text-transform: uppercase;
@@ -216,11 +226,10 @@ a { text-decoration: none; color: var(--color-primary); }
 .match-meta-league { font-weight: 700; color: var(--color-primary); margin-top: 2px; }
 
 .last-match-strip {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: var(--radius);
-  padding: 16px 20px;
+  background: var(--color-dark);
+  padding: 22px;
 }
+.last-match-strip-inline { flex: 1; min-width: 220px; display: flex; flex-direction: column; justify-content: center; }
 .last-match-strip .match-card-label { color: var(--color-accent); }
 .last-match-row {
   display: flex;
@@ -229,6 +238,76 @@ a { text-decoration: none; color: var(--color-primary); }
   font-weight: 700;
   color: var(--color-white);
 }
+
+@media (max-width: 700px) {
+  .hero { padding-bottom: 210px; }
+  .match-bar-inner { border-radius: var(--radius); }
+}
+
+/* ===== BANER PODSTRONY (nagłówek na osobnych stronach, np. Aktualności, Zespół) ===== */
+.page-hero {
+  background: linear-gradient(120deg, var(--color-dark) 0%, var(--color-primary-dark) 130%);
+  color: var(--color-white);
+  padding: 70px 20px 56px;
+}
+.page-hero .breadcrumb {
+  display: block;
+  color: var(--color-muted-light);
+  font-size: 0.82rem;
+  margin-bottom: 12px;
+}
+.page-hero .breadcrumb a { color: var(--color-muted-light); }
+.page-hero .breadcrumb a:hover { color: var(--color-accent); }
+.page-hero a { color: var(--color-accent); }
+.page-hero h1 {
+  color: var(--color-white);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 10px;
+}
+.page-hero p {
+  color: #dfe7e1;
+  max-width: 620px;
+  margin: 0;
+}
+
+/* ===== SKRÓTY / KAFELKI "POZNAJ KLUB" (strona główna → podstrony) ===== */
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.quick-link-card {
+  display: block;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--color-accent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.quick-link-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.quick-link-card h3 { margin-bottom: 6px; font-size: 1.1rem; }
+.quick-link-card p { margin: 0; color: var(--color-muted); font-size: 0.88rem; }
+.quick-link-card span.quick-link-arrow { display: inline-block; margin-top: 10px; font-weight: 800; color: var(--color-primary); }
+
+.section-more { text-align: center; margin-top: 36px; }
+
+/* ===== KONTAKT (osobna strona) ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.contact-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+.contact-card h3 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.4px; color: var(--color-primary); margin-bottom: 10px; }
+.contact-card p { margin: 0 0 6px; }
+.contact-card a { color: var(--color-text); font-weight: 700; }
+.contact-card a:hover { color: var(--color-primary); }
 
 /* ===== STATS STRIP (osiągnięcia) ===== */
 .stats-strip {
@@ -284,10 +363,16 @@ a { text-decoration: none; color: var(--color-primary); }
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
 }
 .news-thumb {
   height: 160px;
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  overflow: hidden;
 }
 .news-body { padding: 20px; position: relative; }
 .news-tag {
@@ -315,7 +400,9 @@ a { text-decoration: none; color: var(--color-primary); }
   background: var(--color-dark-2);
   border-radius: var(--radius);
   padding: 16px;
+  transition: transform 0.25s ease;
 }
+.player-card:hover { transform: translateY(-6px); }
 .player-photo {
   height: 160px;
   width: 100%;
@@ -330,8 +417,10 @@ a { text-decoration: none; color: var(--color-primary); }
 .player-card span { color: var(--color-muted-light); font-size: 0.8rem; }
 
 /* ===== TERMINARZ ===== */
+.table-scroll { overflow-x: auto; }
 .fixtures-table {
   width: 100%;
+  min-width: 480px;
   border-collapse: collapse;
   background: var(--color-white);
   box-shadow: var(--shadow);
@@ -389,6 +478,7 @@ a { text-decoration: none; color: var(--color-primary); }
 
 /* ===== HISTORIA KLUBU (linia czasu, animacje) ===== */
 .eyebrow-dark { color: var(--color-primary); text-transform: uppercase; font-weight: 800; font-size: 0.78rem; letter-spacing: 1px; margin-bottom: 6px; }
+.eyebrow-light { color: var(--color-accent); }
 
 /* Ukrycie/animacja działa tylko gdy JS dodał klasę .js-reveal do <body> — bez JS treść jest zawsze widoczna */
 .js-reveal .reveal-item {
@@ -548,7 +638,6 @@ a { text-decoration: none; color: var(--color-primary); }
 
 /* ===== RESPONSYWNOŚĆ ===== */
 @media (max-width: 960px) {
-  .hero-inner-grid { grid-template-columns: 1fr; }
   .about-grid, .academy-grid { grid-template-columns: 1fr; }
   .history-stats { grid-template-columns: repeat(2, 1fr); }
   .academy-grid .academy-media { order: -1; }
@@ -566,5 +655,6 @@ a { text-decoration: none; color: var(--color-primary); }
     box-shadow: var(--shadow);
   }
   .main-nav.open { display: flex; }
+  .main-nav a { color: var(--color-dark); opacity: 1; }
   .navbar { flex-wrap: wrap; }
 }
