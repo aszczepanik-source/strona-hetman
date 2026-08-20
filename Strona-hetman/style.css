@@ -185,7 +185,7 @@ a { text-decoration: none; color: var(--color-primary); }
   min-height: 100vh;
   display: flex;
   align-items: flex-end;
-  padding: 40px 20px 160px;
+  padding: 40px 20px 80px;
 }
 .hero-content { max-width: 720px; }
 .hero-feature-badge {
@@ -220,66 +220,6 @@ a { text-decoration: none; color: var(--color-primary); }
 .btn-primary { background: var(--color-accent); color: var(--color-dark); }
 .btn-outline { border: 2px solid var(--color-white); color: var(--color-white); }
 
-/* ===== PASEK MECZOWY: "pływająca" belka najeżdżająca na dół zdjęcia hero ===== */
-.match-bar {
-  position: relative;
-  z-index: 5;
-  margin: -90px 0 40px;
-}
-.match-bar-inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.3);
-}
-.match-card {
-  background: var(--color-white);
-  color: var(--color-text);
-  padding: 22px;
-}
-.match-card-inline { flex: 2; min-width: 300px; }
-.match-card-label {
-  display: block;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-}
-.match-teams {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 6px 0 14px;
-}
-.team { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1; }
-.team img { width: 52px; height: 52px; object-fit: contain; }
-.team span { font-weight: 700; font-size: 0.8rem; text-align: center; }
-.match-score { font-weight: 800; font-size: 1.1rem; color: var(--color-muted); }
-.match-meta { text-align: center; font-size: 0.8rem; color: var(--color-muted); margin: 0; }
-.match-meta-league { font-weight: 700; color: var(--color-primary); margin-top: 2px; }
-
-.last-match-strip {
-  background: var(--color-dark);
-  padding: 22px;
-}
-.last-match-strip-inline { flex: 1; min-width: 220px; display: flex; flex-direction: column; justify-content: center; }
-.last-match-strip .match-card-label { color: var(--color-accent); }
-.last-match-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 700;
-  color: var(--color-white);
-}
-
-@media (max-width: 700px) {
-  .hero { padding-bottom: 210px; }
-  .match-bar-inner { border-radius: var(--radius); }
-}
 
 /* ===== BANER PODSTRONY (nagłówek na osobnych stronach, np. Aktualności, Zespół) ===== */
 .page-hero {

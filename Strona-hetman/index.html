@@ -69,37 +69,6 @@
   </div>
 </section>
 
-<!-- ===== PASEK MECZOWY — "pływająca" belka na dole zdjęcia, styl dużych klubów ===== -->
-<section class="match-bar">
-  <div class="container match-bar-inner">
-    <div class="match-card match-card-inline">
-      <span class="match-card-label">Najbliższy mecz</span>
-      <div class="match-teams">
-        <div class="team">
-          <img src="logo-klubu.png" alt="Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
-          <span>Hetman</span>
-        </div>
-        <div class="match-score">vs</div>
-        <div class="team">
-          <img src="placeholder-logo.svg" alt="Granat Skarżysko-Kamienna">
-          <span>Granat Sk.-Kam.</span>
-        </div>
-      </div>
-      <p class="match-meta">Niedziela, 23 sierpnia, 17:00 &middot; wyjazd</p>
-      <p class="match-meta match-meta-league">IV liga świętokrzyska</p>
-    </div>
-
-    <div class="last-match-strip last-match-strip-inline">
-      <span class="match-card-label">Ostatni mecz</span>
-      <div class="last-match-row">
-        <span>Hetman</span>
-        <strong class="score-loss">2:6</strong>
-        <span>Victoria 2015</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== OSIĄGNIĘCIA / HISTORIA W PIGUŁCE ===== -->
 <section class="stats-strip">
   <div class="container stats-grid">
@@ -107,6 +76,91 @@
     <div class="stat"><strong>IV liga</strong><span>Świętokrzyska</span></div>
     <div class="stat"><strong>2008/09</strong><span>Awans z IV do III ligi</span></div>
     <div class="stat"><strong>Kilka</strong><span>Grup młodzieżowych</span></div>
+  </div>
+</section>
+
+<!-- ===== MECZE PIERWSZEJ DRUŻYNY — poprzedni / najbliższy / kolejny (styl dużych klubów) ===== -->
+<!--
+  Ta sama karuzela co na stronie Terminarz — synchronizuj dane w obu miejscach.
+  Adresy stadionów rywali są orientacyjne, podmień gdy będą znane.
+-->
+<section class="section fixture-spotlight-section">
+  <div class="container">
+    <p class="eyebrow-dark">Hetman Włoszczowa</p>
+    <h2 class="section-title">Mecze pierwszej drużyny</h2>
+
+    <div class="fixture-spotlight">
+      <article class="fixture-card fixture-card-played">
+        <div class="fixture-card-top">
+          <span class="fixture-date"><strong>15.08</strong> Sobota, g. 17:00</span>
+          <span class="fixture-competition">IV liga świętokrzyska</span>
+        </div>
+        <div class="fixture-teams">
+          <div class="fixture-team">
+            <img src="logo-klubu.png" alt="Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
+            <span>Hetman<br>Włoszczowa</span>
+          </div>
+          <div class="fixture-score">2:6</div>
+          <div class="fixture-team">
+            <img src="placeholder-logo.svg" alt="Victoria 2015 Skalbmierz">
+            <span>Victoria 2015<br>Skalbmierz</span>
+          </div>
+        </div>
+        <div class="fixture-venue">
+          <span class="fixture-venue-name">Stadion OSiR im. Mariana Górskiego</span>
+          <span class="fixture-venue-address">ul. Wiśniowa 30, Włoszczowa</span>
+        </div>
+      </article>
+
+      <article class="fixture-card fixture-card-next">
+        <div class="fixture-card-top">
+          <span class="fixture-date"><strong>23.08</strong> Niedziela, g. 17:00</span>
+          <span class="fixture-competition">IV liga świętokrzyska</span>
+        </div>
+        <div class="fixture-next-label-wrap"><span class="fixture-next-label">Najbliższy mecz</span></div>
+        <div class="fixture-teams">
+          <div class="fixture-team">
+            <img src="placeholder-logo.svg" alt="Granat Skarżysko-Kamienna">
+            <span>Granat<br>Skarżysko-Kam.</span>
+          </div>
+          <div class="fixture-vs">VS</div>
+          <div class="fixture-team">
+            <img src="logo-klubu.png" alt="Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
+            <span>Hetman<br>Włoszczowa</span>
+          </div>
+        </div>
+        <div class="fixture-venue">
+          <span class="fixture-venue-name">Stadion Miejski Granatu</span>
+          <span class="fixture-venue-address">ul. Sportowa 4, Skarżysko-Kamienna</span>
+        </div>
+      </article>
+
+      <article class="fixture-card">
+        <div class="fixture-card-top">
+          <span class="fixture-date"><strong>26.08</strong> Środa, g. 17:15</span>
+          <span class="fixture-competition">IV liga świętokrzyska</span>
+        </div>
+        <div class="fixture-teams">
+          <div class="fixture-team">
+            <img src="placeholder-logo.svg" alt="Sparta Kazimierza Wielka">
+            <span>Sparta<br>Kazimierza Wielka</span>
+          </div>
+          <div class="fixture-vs">VS</div>
+          <div class="fixture-team">
+            <img src="logo-klubu.png" alt="Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
+            <span>Hetman<br>Włoszczowa</span>
+          </div>
+        </div>
+        <div class="fixture-venue">
+          <span class="fixture-venue-name">Stadion Miejski</span>
+          <span class="fixture-venue-address">ul. Zacisze 2, Kazimierza Wielka</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-more">
+      <a class="btn btn-primary" href="terminarz.html">Pełny terminarz i tabela</a>
+    </div>
   </div>
 </section>
 
