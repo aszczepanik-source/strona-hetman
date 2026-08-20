@@ -53,7 +53,7 @@ a { text-decoration: none; color: var(--color-primary); }
   padding: 0 20px;
 }
 
-/* ===== TOPBAR ===== */
+/* ===== TOPBAR (pełna szerokość, bez ograniczenia przez .container) ===== */
 .topbar {
   background: var(--color-dark);
   color: var(--color-muted-light);
@@ -63,18 +63,20 @@ a { text-decoration: none; color: var(--color-primary); }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 20px;
+  padding: 7px 28px;
   flex-wrap: wrap;
   gap: 8px;
 }
+.topbar-contact span { margin-right: 16px; }
+.topbar-social { display: flex; align-items: center; gap: 14px; }
 .topbar-social a {
   color: var(--color-muted-light);
-  margin-right: 14px;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
 }
-.topbar-contact span { margin-left: 16px; }
+.topbar-social a:hover { color: var(--color-accent); }
 
-/* ===== NAVBAR (pełna pomarańczowa belka, herb na środku — układ jak widzew.com.pl) ===== */
+/* ===== NAVBAR (pełna pomarańczowa belka na całą szerokość, herb na środku — jak widzew.com.pl) ===== */
 .site-header {
   position: sticky;
   top: 0;
@@ -88,16 +90,16 @@ a { text-decoration: none; color: var(--color-primary); }
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 14px 24px;
+  padding: 16px 28px;
   overflow: visible;
 }
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 14px;
   min-width: 0;
   /* nie może wchodzić pod herb na środku belki */
-  max-width: calc(50% - 55px);
+  max-width: calc(50% - 95px);
 }
 .navbar-right { flex-shrink: 0; }
 
@@ -115,15 +117,15 @@ a { text-decoration: none; color: var(--color-primary); }
   align-items: center;
 }
 .brand-logo {
-  height: 116px;
-  width: 116px;
+  height: 160px;
+  width: 160px;
   object-fit: contain;
   filter: drop-shadow(0 6px 14px rgba(0,0,0,0.45));
 }
 
 .main-nav {
   display: flex;
-  gap: 6px;
+  gap: 11px;
   flex-wrap: wrap;
   min-width: 0;
 }
@@ -131,32 +133,43 @@ a { text-decoration: none; color: var(--color-primary); }
   color: var(--color-white);
   opacity: 0.9;
   font-weight: 700;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0;
+  letter-spacing: 0.1px;
   white-space: nowrap;
 }
 .main-nav a:hover { color: var(--color-cream); opacity: 1; }
 .main-nav a.active { color: var(--color-cream); opacity: 1; }
 
+/* Duża, gruba ikonka hamburgera (3 belki), jak u widzew.com.pl */
 .nav-toggle {
   display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 34px;
+  height: 26px;
   background: none;
   border: none;
-  color: var(--color-white);
-  font-size: 1.25rem;
-  line-height: 1;
+  padding: 0;
   cursor: pointer;
   flex-shrink: 0;
+}
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 3.5px;
+  background: var(--color-white);
+  border-radius: 2px;
 }
 
 .btn-cta {
   background: var(--color-cream);
   color: var(--color-primary-dark);
-  padding: 13px 22px;
+  padding: 14px 24px;
   border-radius: var(--radius);
   font-weight: 800;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
   white-space: nowrap;
@@ -783,6 +796,7 @@ a { text-decoration: none; color: var(--color-primary); }
   .main-nav.open { display: flex; }
   .main-nav a { color: var(--color-dark); opacity: 1; }
   .navbar { padding: 10px 16px; }
-  .brand-logo { height: 76px; width: 76px; }
-  .btn-cta { padding: 9px 14px; font-size: 0.75rem; }
+  .brand-logo { height: 64px; width: 64px; }
+  .btn-cta { padding: 7px 10px; font-size: 0.62rem; letter-spacing: 0; }
+  .navbar-right { max-width: calc(50% - 40px); }
 }
