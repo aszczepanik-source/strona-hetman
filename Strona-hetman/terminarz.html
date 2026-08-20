@@ -27,14 +27,9 @@
 
 <header class="site-header">
   <div class="container navbar">
-    <a class="brand" href="index.html">
-      <img class="brand-logo" src="logo-klubu.png" alt="Herb KS Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
-      <span class="brand-text"><strong>Hetman</strong> Włoszczowa</span>
-    </a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu">☰</button>
-
-    <nav class="main-nav" id="mainNav">
+    <div class="navbar-left">
+      <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu">☰</button>
+      <nav class="main-nav" id="mainNav">
       <a href="aktualnosci.html">Aktualności</a>
       <a href="zespol.html">Zespół</a>
       <a href="terminarz.html" class="active">Terminarz</a>
@@ -43,8 +38,15 @@
       <a href="sponsorzy.html">Sponsorzy</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
+    </div>
 
-    <a class="btn btn-cta" href="sponsorzy.html">Zostań sponsorem</a>
+    <a class="brand brand-center" href="index.html">
+      <img class="brand-logo" src="logo-klubu.png" alt="Herb KS Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
+    </a>
+
+    <div class="navbar-right">
+      <a class="btn btn-cta" href="sponsorzy.html">Zostań sponsorem</a>
+    </div>
   </div>
 </header>
 
