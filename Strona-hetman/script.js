@@ -119,6 +119,30 @@ document.querySelectorAll('.team-carousel').forEach((carousel) => {
   }
 });
 
+// Odliczanie do najbliższego meczu (karta .fixture-card-next)
+document.querySelectorAll('.fixture-countdown').forEach((el) => {
+  const kickoff = new Date(el.dataset.kickoff).getTime();
+  if (Number.isNaN(kickoff)) return;
+
+  const dEl = el.querySelector('[data-unit="d"]');
+  const hEl = el.querySelector('[data-unit="h"]');
+  const mEl = el.querySelector('[data-unit="m"]');
+  const sEl = el.querySelector('[data-unit="s"]');
+  const pad = (n) => String(n).padStart(2, '0');
+
+  const tick = () => {
+    const diff = Math.max(0, kickoff - Date.now());
+    const totalSeconds = Math.floor(diff / 1000);
+    if (dEl) dEl.textContent = pad(Math.floor(totalSeconds / 86400));
+    if (hEl) hEl.textContent = pad(Math.floor((totalSeconds % 86400) / 3600));
+    if (mEl) mEl.textContent = pad(Math.floor((totalSeconds % 3600) / 60));
+    if (sEl) sEl.textContent = pad(totalSeconds % 60);
+  };
+
+  tick();
+  setInterval(tick, 1000);
+});
+
 // Automatyczny rok w stopce
 const yearEl = document.getElementById('year');
 if (yearEl) {
