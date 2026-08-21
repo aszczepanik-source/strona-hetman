@@ -178,16 +178,37 @@ a { text-decoration: none; color: var(--color-primary); }
 
 /* ===== HERO: pełnoekranowe zdjęcie, tekst dosunięty do dołu (styl dużych klubów) ===== */
 .hero {
+  position: relative;
+  overflow: hidden;
   background-color: var(--color-primary-dark);
-  background-size: cover;
-  background-position: center 22%;
   color: var(--color-white);
   min-height: 100vh;
   display: flex;
   align-items: flex-end;
   padding: 40px 20px 80px;
 }
-.hero-content { max-width: 720px; }
+/* Samo zdjęcie na osobnej warstwie — filtr (ostrość/kontrast) nie odbija się
+   na tekście, a kadrowanie (pozycja) trzymamy tu, żeby łatwo je poprawiać. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-img);
+  background-size: cover;
+  background-position: center 50%;
+  filter: contrast(1.1) saturate(1.15) brightness(1.05);
+  z-index: 0;
+}
+/* Gradient dla czytelności tekstu — osobna warstwa NAD zdjęciem, więc filtr
+   powyżej nie rozjaśnia/nie zmienia przyciemnienia dołu. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16,21,26,0.25) 0%, rgba(16,21,26,0.45) 45%, rgba(16,21,26,0.95) 100%);
+  z-index: 1;
+}
+.hero-content { position: relative; z-index: 2; max-width: 720px; }
 .hero-feature-badge {
   display: inline-block;
   background: var(--color-accent);
@@ -683,13 +704,19 @@ a { text-decoration: none; color: var(--color-primary); }
 .fixture-venue-name { font-weight: 700; color: var(--color-text); }
 .fixture-venue-address { color: var(--color-muted); font-size: 0.72rem; }
 
-/* Karta najbliższego meczu — wyróżniona kolorem klubowym, jak u dużych klubów */
+/* Karta najbliższego meczu — wyróżniona kolorem klubowym i efektem 3D, jak u dużych klubów */
 .fixture-card-next {
   background: linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  box-shadow: var(--shadow-lg);
-  transform: scale(1.05);
+  box-shadow: 0 30px 60px -10px rgba(0,0,0,0.5), 0 10px 20px rgba(191,87,0,0.35);
+  transform: perspective(1000px) scale(1.09) rotateX(2deg);
+  transform-origin: bottom center;
   position: relative;
   z-index: 2;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.fixture-card-next:hover {
+  transform: perspective(1000px) scale(1.11) rotateX(0deg);
+  box-shadow: 0 36px 70px -8px rgba(0,0,0,0.55), 0 12px 24px rgba(191,87,0,0.4);
 }
 .fixture-card-next .fixture-card-top { background: rgba(0,0,0,0.18); }
 .fixture-card-next .fixture-date,
@@ -711,6 +738,30 @@ a { text-decoration: none; color: var(--color-primary); }
   letter-spacing: 0.4px;
   padding: 5px 14px;
   border-radius: 20px;
+}
+
+/* Odliczanie do najbliższego meczu */
+.fixture-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 14px;
+  padding: 0 18px 22px;
+}
+.fixture-countdown-item { display: flex; align-items: baseline; gap: 3px; }
+.fixture-countdown-value {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.9rem;
+  color: var(--color-white);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.fixture-countdown-label {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
 }
 
 @media (max-width: 900px) {
@@ -927,6 +978,14 @@ a { text-decoration: none; color: var(--color-primary); }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 32px;
+}
+.footer-banner {
+  display: block;
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 16px;
 }
 .footer-grid h3 { color: var(--color-white); font-size: 1rem; }
 .footer-grid a { display: block; color: var(--color-muted-light); margin-bottom: 8px; }

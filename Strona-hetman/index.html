@@ -57,7 +57,7 @@
   ZDJĘCIE HERO (pełnoekranowe tło sekcji startowej): hero-zespol.jpg
   Podmień na nowsze/lepsze zdjęcie zespołu w tym samym miejscu, jeśli będzie potrzeba.
 -->
-<section class="hero" id="top" style="background-image: linear-gradient(180deg, rgba(16,21,26,0.25) 0%, rgba(16,21,26,0.45) 45%, rgba(16,21,26,0.95) 100%), url('hero-zespol.jpg');">
+<section class="hero" id="top" style="--hero-img: url('hero-zespol.jpg');">
   <div class="container hero-content">
     <div class="hero-feature-badge">Sezon 2026/2027</div>
     <h1>Razem od pokoleń.<br>Gramy dla Włoszczowy.</h1>
@@ -128,6 +128,13 @@
             <img src="logo-klubu.png" alt="Hetman Włoszczowa" onerror="this.src='placeholder-logo.svg'">
             <span>Hetman<br>Włoszczowa</span>
           </div>
+        </div>
+        <!-- Odliczanie do meczu — data/godzina w data-kickoff, podmień razem z terminem meczu -->
+        <div class="fixture-countdown" data-kickoff="2026-08-23T17:00:00+02:00">
+          <div class="fixture-countdown-item"><span class="fixture-countdown-value" data-unit="d">00</span><span class="fixture-countdown-label">D</span></div>
+          <div class="fixture-countdown-item"><span class="fixture-countdown-value" data-unit="h">00</span><span class="fixture-countdown-label">G</span></div>
+          <div class="fixture-countdown-item"><span class="fixture-countdown-value" data-unit="m">00</span><span class="fixture-countdown-label">M</span></div>
+          <div class="fixture-countdown-item"><span class="fixture-countdown-value" data-unit="s">00</span><span class="fixture-countdown-label">S</span></div>
         </div>
         <div class="fixture-venue">
           <span class="fixture-venue-name">Stadion Miejski Granatu</span>
@@ -348,6 +355,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
+      <img class="footer-banner" src="hetman-to-my.jpg" alt="Hetman to My — KS Hetman Włoszczowa">
       <h3>Klub Sportowy Hetman Włoszczowa</h3>
       <p>ul. Wiśniowa 2, 29-100 Włoszczowa</p>
       <p><a href="mailto:kshetmanwloszczowa@gmail.com">kshetmanwloszczowa@gmail.com</a></p>
