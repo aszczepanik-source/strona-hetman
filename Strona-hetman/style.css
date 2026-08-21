@@ -521,22 +521,19 @@ a { text-decoration: none; color: var(--color-primary); }
 .team-see-all:hover { color: var(--color-white); }
 
 .team-carousel { position: relative; }
+.team-carousel-viewport { overflow: hidden; }
 .team-carousel-track {
   display: flex;
   gap: 4px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  padding-bottom: 4px;
+  width: max-content;
+  will-change: transform;
 }
-.team-carousel-track::-webkit-scrollbar { display: none; }
 .team-carousel-card {
-  flex: 0 0 220px;
-  scroll-snap-align: start;
+  flex: 0 0 300px;
   display: block;
 }
 .team-carousel-photo {
-  height: 280px;
+  height: 400px;
   background-size: cover;
   background-position: top center;
   background-color: var(--color-dark-2);
@@ -566,15 +563,15 @@ a { text-decoration: none; color: var(--color-primary); }
 }
 .carousel-arrow {
   position: absolute;
-  top: 40%;
+  top: 44%;
   transform: translateY(-50%);
   background: rgba(16,21,26,0.7);
   border: 1px solid rgba(255,255,255,0.25);
   color: var(--color-white);
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1;
   cursor: pointer;
   z-index: 5;
@@ -584,8 +581,8 @@ a { text-decoration: none; color: var(--color-primary); }
 .carousel-arrow-right { right: -8px; }
 
 @media (max-width: 700px) {
-  .team-carousel-card { flex: 0 0 160px; }
-  .team-carousel-photo { height: 200px; }
+  .team-carousel-card { flex: 0 0 200px; }
+  .team-carousel-photo { height: 260px; }
   .carousel-arrow { display: none; }
 }
 
